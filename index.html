@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="ירון חנן — מומחה לניהול סיכונים ומנהיגות בזמן חירום. הרצאות, סדנאות וייעוץ ארגוני לארגונים ומנהלים בישראל." />
+    <title>ירון חנן | מומחה לניהול סיכונים ומנהיגות בזמן חירום</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700;900&family=Assistant:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: 'Assistant', sans-serif;
+        background-color: #070714;
+        color: #fff;
+        margin: 0;
+        overflow-x: hidden;
+      }
+      h1, h2, h3, h4 {
+        font-family: 'Heebo', sans-serif;
+      }
+
+      @keyframes float {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        33% { transform: translateY(-18px) rotate(2deg); }
+        66% { transform: translateY(-8px) rotate(-1deg); }
+      }
+      @keyframes float2 {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-24px) rotate(-3deg); }
+      }
+      @keyframes shimmer {
+        0% { background-position: -200% center; }
+        100% { background-position: 200% center; }
+      }
+      @keyframes gradient-shift {
+        0%, 100% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+      }
+      @keyframes fade-up {
+        from { opacity: 0; transform: translateY(32px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes pulse-glow {
+        0%, 100% { box-shadow: 0 0 20px rgba(255, 107, 53, 0.35), 0 4px 20px rgba(255, 107, 53, 0.2); }
+        50% { box-shadow: 0 0 40px rgba(255, 107, 53, 0.65), 0 4px 40px rgba(255, 107, 53, 0.35); }
+      }
+      @keyframes spin-slow {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      @keyframes counter-in {
+        from { opacity: 0; transform: scale(0.5); }
+        to { opacity: 1; transform: scale(1); }
+      }
+      @keyframes beacon-rotate {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      @keyframes beacon-glow {
+        0%, 100% { opacity: 0.7; box-shadow: 0 0 12px #FF6B35, 0 0 24px rgba(255,107,53,0.4); }
+        50% { opacity: 1; box-shadow: 0 0 24px #FF6B35, 0 0 50px rgba(255,107,53,0.6), 0 0 80px rgba(255,107,53,0.2); }
+      }
+      @keyframes beacon-slide-down {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(22px); }
+      }
+      @keyframes beacon-slide-up {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-22px); }
+      }
+      @keyframes top-bar-shimmer {
+        0% { background-position: -200% center; }
+        100% { background-position: 200% center; }
+      }
+      @keyframes scan-line {
+        0% { top: 0%; opacity: 1; }
+        90% { opacity: 0.3; }
+        100% { top: 100%; opacity: 0; }
+      }
+
+      .animate-float { animation: float 6s ease-in-out infinite; }
+      .animate-float2 { animation: float2 8s ease-in-out infinite; }
+      .animate-float3 { animation: float 5s ease-in-out infinite reverse; }
+      .animate-float4 { animation: float2 7s ease-in-out infinite reverse; }
+      .animate-fade-up { animation: fade-up 0.7s ease-out forwards; }
+      .animate-pulse-glow { animation: pulse-glow 2.5s ease-in-out infinite; }
+      .animate-spin-slow { animation: spin-slow 20s linear infinite; }
+      .animate-beacon-rotate { animation: beacon-rotate 2s linear infinite; }
+      .animate-beacon-glow { animation: beacon-glow 1.8s ease-in-out infinite; }
+      .animate-beacon-down { animation: beacon-slide-down 3.5s ease-in-out infinite; }
+      .animate-beacon-up { animation: beacon-slide-up 3.5s ease-in-out infinite; }
+
+      .gradient-text {
+        background: linear-gradient(90deg, #FF6B35, #FFD60A, #ffffff);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: gradient-shift 4s ease infinite;
+      }
+      .gradient-text-orange {
+        background: linear-gradient(90deg, #FF6B35, #FFD60A);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .card-hover {
+        transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      }
+      .card-hover:hover {
+        transform: translateY(-6px);
+      }
+
+      .section-divider {
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(255,107,53,0.3), rgba(255,214,10,0.3), transparent);
+      }
+
+      ::-webkit-scrollbar { width: 5px; }
+      ::-webkit-scrollbar-track { background: #040410; }
+      ::-webkit-scrollbar-thumb { background: linear-gradient(to bottom, #FF6B35, #BF5AF2); border-radius: 3px; }
+      ::-webkit-scrollbar-thumb:hover { background: #FF6B35; }
+    </style>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
